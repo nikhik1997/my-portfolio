@@ -1,0 +1,23 @@
+title: My Portfolio
+description: This is my portfolio website.
+theme: minima
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Optional settings for the minima theme
+minima:
+  skin: classic
+
+# Configuring Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Enable syntax highlighting
+highlighter: rouge
+
+# Base URL for GitHub Pages
+url: "https://your-username.github.io"
+baseurl: "/portfolio"
+
