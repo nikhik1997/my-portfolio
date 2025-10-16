@@ -7,18 +7,18 @@
     <meta name="keywords" content="Nikhil K, portfolio, Nikhil, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
     <meta name="description" content="Welcome to Nikhil's Portfolio. Full-Stack Web Developer and Android App Developer" />
     
-    <link rel="stylesheet" href="/my-portfolio/assets/css/style.css"> 
+    <link rel="stylesheet" href="./assets/css/style.css"> 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link id='favicon' rel="shortcut icon" href="/my-portfolio/assets/images/favicon.png" type="image/x-png"> 
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png"> 
     
     <title>Portfolio | Nikhil K </title>
 </head>
 <body oncontextmenu="return false">
 
 <header>
-        <a href="/my-portfolio/index.html" class="logo"><i class="fab fa-node-nk"></i> Nikhil</a> 
+        <a href="./index.html" class="logo"><i class="fab fa-node-nk"></i> Nikhil</a> 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
@@ -49,7 +49,7 @@
       </div>
     </div>
 <div class="image">
-    <img draggable="false" class="tilt" src="/my-portfolio/assets/images/hero.png" alt=""> 
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt=""> 
 </div>
 </section>
 <section class="about" id="about">
@@ -58,7 +58,7 @@
     <div class="row">
 
     <div class="image">
-        <img draggable="false" class="tilt" src="/my-portfolio/assets/images/profile2.jpg" alt=""> 
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt=""> 
     </div>
     <div class="content">
         <h3>I'm Nikhil</h3>
@@ -107,7 +107,7 @@
 
     <div class="box">
         <div class="image">
-        <img draggable="false" src="/my-portfolio/assets/images/educat/college.jpg" alt=""> 
+        <img draggable="false" src="./assets/images/educat/college.jpg" alt=""> 
         </div>
         <div class="content">
         <h3>Bachelor of Engineering in Computer Science </h3>
@@ -118,7 +118,7 @@
 
     <div class="box">
       <div class="image">
-      <img draggable="false" src="/my-portfolio/assets/images/educat/school.jpg" alt=""> 
+      <img draggable="false" src="./assets/images/educat/school.jpg" alt=""> 
       </div>
       <div class="content">
       <h3>Master's | Computer Science</h3>
@@ -138,7 +138,7 @@
     </div>
 
 <div class="viewall">
-  <a href="/my-portfolio/projects.html" class="btn"><span>View All</span> <i class="fas fa-arrow-right"></i>
+  <a href="./projects/" class="btn"><span>View All</span> <i class="fas fa-arrow-right"></i>
 </a>
 </div>
 
@@ -187,7 +187,7 @@
   </div>
 
   <div class="morebtn">
-    <a href="/my-portfolio/experience.html" class="btn"><span>View All</span> <i class="fas fa-arrow-right"></i>
+    <a href="./experience/" class="btn"><span>View All</span> <i class="fas fa-arrow-right"></i>
   </a>
   </div>
 
@@ -235,8 +235,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="/my-portfolio/assets/js/particles.min.js"></script> 
-<script src="/my-portfolio/assets/js/app.js"></script> 
+<script src="./assets/js/particles.min.js"></script> 
+<script src="./assets/js/app.js"></script> 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -247,10 +247,10 @@
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
 
-<script src="/my-portfolio/assets/js/script.js"></script> 
+<script src="./assets/js/script.js"></script> 
 <script>
   // Fetching data from skills.json file
-  // FIX 12: Use absolute path for skills.json 
+  // The fetch logic must use the full /my-portfolio/ path for GH Pages to work
   fetch('/my-portfolio/skills.json') 
       .then(response => response.json())
       .then(data => {
