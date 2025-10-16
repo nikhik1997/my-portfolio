@@ -37,7 +37,8 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // $("#contact-form").submit(function (event) {
+    // <!-- emailjs to mail contact form data -->
+    $("#contact-form").submit(function (event) {
         emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
         emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
@@ -51,7 +52,9 @@ $(document).ready(function () {
             });
         event.preventDefault();
     });
-    // });
+    // <!-- emailjs to mail contact form data -->
+
+});
 
 document.addEventListener('visibilitychange',
     function () {
@@ -66,19 +69,22 @@ document.addEventListener('visibilitychange',
     });
 
 
-// var typed = new Typed(".typing-text", {
+// <!-- typed js effect starts -->
+var typed = new Typed(".typing-text", {
     strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
     backDelay: 500,
 });
-// async function fetchData(type = "skills") {
+// <!-- typed js effect ends -->
+
+async function fetchData(type = "skills") {
     let response
     type === "skills" ?
-        response = await fetch("/my-portfolio/skills.json") // **NOTE: Updated for GH Pages**
+        response = await fetch("skills.json")
         :
-        response = await fetch("/my-portfolio/projects/projects.json") // **NOTE: Updated for GH Pages**
+        response = await fetch("./projects/projects.json")
     const data = await response.json();
     return data;
 }
@@ -104,7 +110,7 @@ function showProjects(projects) {
     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
         projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="/my-portfolio/assets/images/projects/${project.image}.png" alt="project" />
+      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>
@@ -121,10 +127,13 @@ function showProjects(projects) {
     });
     projectsContainer.innerHTML = projectHTML;
 
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    // <!-- tilt js effect starts -->
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
         max: 15,
     });
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
+    // <!-- tilt js effect ends -->
+
+    /* ===== SCROLL REVEAL ANIMATION ===== */
     const srtop = ScrollReveal({
         origin: 'top',
         distance: '80px',
@@ -145,10 +154,14 @@ fetchData("projects").then(data => {
     showProjects(data);
 });
 
-// VanillaTilt.init(document.querySelectorAll(".tilt"), {
+// <!-- tilt js effect starts -->
+VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
 });
-// // pre loader start
+// <!-- tilt js effect ends -->
+
+
+// pre loader start
 // function loader() {
 //     document.querySelector('.loader-container').classList.add('fade-out');
 // }
